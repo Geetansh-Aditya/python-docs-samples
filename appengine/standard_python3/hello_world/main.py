@@ -14,7 +14,7 @@
 
 # [START gae_python38_app]
 # [START gae_python3_app]
-from flask import Flask
+from flask import Flask, render_template
 
 
 # If `entrypoint` is not defined in app.yaml, App Engine will look for an app
@@ -29,7 +29,7 @@ def hello():
     Returns:
         A string with the words 'Hello World!'.
     """
-    return "Hello World! Twice Again"
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
